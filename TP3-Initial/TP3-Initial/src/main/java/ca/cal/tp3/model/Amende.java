@@ -8,6 +8,8 @@ import javax.persistence.*;
 @AllArgsConstructor
 @NoArgsConstructor
 @Builder
+@Table
+
 public class Amende {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)

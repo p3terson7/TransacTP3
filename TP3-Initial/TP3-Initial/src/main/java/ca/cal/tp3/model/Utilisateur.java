@@ -10,6 +10,7 @@ import javax.persistence.*;
 @Setter
 @Entity
 @DiscriminatorColumn(name = "util_type")
+@Table
 public abstract class Utilisateur {
 
     @Id

@@ -10,6 +10,8 @@ import javax.persistence.*;
 @Setter
 @Entity
 @DiscriminatorValue("LIVRE")
+@Table
+
 public class Livre extends Document {
     @Transient
     private final int EMPRUNT_DUREE = 7;

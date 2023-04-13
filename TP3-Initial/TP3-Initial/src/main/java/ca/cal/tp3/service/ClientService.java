@@ -18,6 +18,7 @@ import ca.cal.tp3.persistence.DocumentRepository;
 import ca.cal.tp3.persistence.EmpruntRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.autoconfigure.domain.EntityScan;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -27,13 +28,14 @@ import java.util.Optional;
 
 import static java.time.temporal.ChronoUnit.DAYS;
 
+@EntityScan(basePackages = "ca.cal.tp3.model")
 @RequiredArgsConstructor
 @Service
 public class ClientService {
     private AmendeRepository amendeRepository;
     private EmpruntRepository empruntRepository;
     private final ClientRepository clientRepository;
-    @Autowired
+
     private final DocumentRepository documentRepository;
 
     public List<DocumentDTO> getAllDocuments() {

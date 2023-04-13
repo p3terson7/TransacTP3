@@ -89,6 +89,10 @@ public class objectsToDTO {
         return clientsDTO;
     }
 
+    public static ClientDTO clientToDTO(Client client) {
+        return new ClientDTO(client.getId(), client.getName(), client.getPassword());
+    }
+
     public static List<LivreDTO> livresToDTO(List<Livre> livres) {
         List<LivreDTO> livresDTO = new ArrayList<>();
         for (Livre l : livres) {

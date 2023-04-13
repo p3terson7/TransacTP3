@@ -9,6 +9,8 @@ import javax.persistence.*;
 @Setter
 @Entity
 @DiscriminatorColumn(name = "doc_type")
+@Table
+
 public abstract class Document {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)

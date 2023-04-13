@@ -10,6 +10,8 @@ import java.time.LocalDate;
 @ToString
 @Builder
 @Entity
+@Table
+
 public class Emprunt {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)

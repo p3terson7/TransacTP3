@@ -1,8 +1,9 @@
 package ca.cal.tp3.persistence;
 
 import ca.cal.tp3.model.Document;
-import ca.cal.tp3.model.Emprunt;
+
 import ca.cal.tp3.model.Livre;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
@@ -10,6 +11,7 @@ import org.springframework.stereotype.Repository;
 
 import java.util.List;
 
+@Qualifier("document")
 @Repository
 public interface DocumentRepository extends JpaRepository<Document, Long> {
     List<Document> findAllByAuteurIgnoreCase(String auteur);

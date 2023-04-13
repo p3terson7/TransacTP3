@@ -6,10 +6,7 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 import lombok.experimental.SuperBuilder;
 
-import javax.persistence.DiscriminatorColumn;
-import javax.persistence.DiscriminatorValue;
-import javax.persistence.Entity;
-import javax.persistence.OneToMany;
+import javax.persistence.*;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -19,6 +16,7 @@ import java.util.List;
 @NoArgsConstructor
 @SuperBuilder
 @DiscriminatorValue("CLIENT")
+@Table(name = "CLIENT")
 public class Client extends Utilisateur {
     @OneToMany(mappedBy = "client")
     @Builder.Default
